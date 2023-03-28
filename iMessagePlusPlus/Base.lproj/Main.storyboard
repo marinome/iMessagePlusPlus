@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginPage-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="LoginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np5-aw-qHt">
+                                <rect key="frame" x="100" y="405" width="191" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take me to main page">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="Black"/>
+                                        <color key="strokeColor" name="Black"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" name="SpringGreen"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="K9R-9B-LeE" kind="showDetail" id="fe6-2d-6co"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="White"/>
+                        <color key="tintColor" name="Black"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429" y="-289"/>
+        </scene>
+        <!--MainPage-->
+        <scene sceneID="meh-y9-tzl">
+            <objects>
+                <viewController title="MainPage" id="K9R-9B-LeE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLH-fo-5Mw">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPW-2m-EoQ">
+                                <rect key="frame" x="251" y="9" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="djc-bo-x3G">
+                                    <children>
+                                        <command title="C++" id="8s8-Rq-2QH"/>
+                                        <command title="..." id="rAd-S9-a18">
+                                            <menuElementAttributes key="attributes" disabled="YES"/>
+                                        </command>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Language:">
+                                    <color key="baseForegroundColor" name="SpringGreen"/>
+                                </buttonConfiguration>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Type Code Here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4sP-G3-M8x">
+                                <rect key="frame" x="16" y="58" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" smartDashesType="no" smartQuotesType="yes"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yzE-2v-GRM"/>
+                        <color key="backgroundColor" name="LightGray"/>
+                        <color key="tintColor" name="Black"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ht8-Uc-sQ8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s3o-zr-9m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316.92307692307691" y="-289.33649289099526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Black">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.792156862745098" green="0.80000000000000004" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SpringGreen">
+            <color red="0.45490196078431372" green="0.98431372549019602" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
