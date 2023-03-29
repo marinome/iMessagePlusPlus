@@ -17,6 +17,8 @@
 		7878AC6429D3A7590037976E /* iMessagePlusPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6329D3A7590037976E /* iMessagePlusPlusTests.swift */; };
 		7878AC6E29D3A7590037976E /* iMessagePlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6D29D3A7590037976E /* iMessagePlusPlusUITests.swift */; };
 		7878AC7029D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */; };
+		78E3C66929D3F48700958CDC /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66729D3F48700958CDC /* Logo.png */; };
+		78E3C66A29D3F48700958CDC /* google.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66829D3F48700958CDC /* google.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7878AC6929D3A7590037976E /* iMessagePlusPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessagePlusPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7878AC6D29D3A7590037976E /* iMessagePlusPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessagePlusPlusUITests.swift; sourceTree = "<group>"; };
 		7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessagePlusPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78E3C66729D3F48700958CDC /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Assets.xcassets/Logo.png; sourceTree = "<group>"; };
+		78E3C66829D3F48700958CDC /* google.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = google.pdf; path = Assets.xcassets/google.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				7878AC4D29D3A7530037976E /* ViewController.swift */,
 				7878AC4F29D3A7530037976E /* Main.storyboard */,
 				7878AC5529D3A7590037976E /* Assets.xcassets */,
+				78E3C66729D3F48700958CDC /* Logo.png */,
+				78E3C66829D3F48700958CDC /* google.pdf */,
 				7878AC5729D3A7590037976E /* LaunchScreen.storyboard */,
 				7878AC5A29D3A7590037976E /* Info.plist */,
 				7878AC5229D3A7530037976E /* iMessagePlusPlus.xcdatamodeld */,
@@ -234,8 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E3C66929D3F48700958CDC /* Logo.png in Resources */,
 				7878AC5929D3A7590037976E /* LaunchScreen.storyboard in Resources */,
 				7878AC5629D3A7590037976E /* Assets.xcassets in Resources */,
+				78E3C66A29D3F48700958CDC /* google.pdf in Resources */,
 				7878AC5129D3A7530037976E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
