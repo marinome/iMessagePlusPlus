@@ -9,15 +9,13 @@ import UIKit
 
 class MainPageViewController: UIViewController {
     
-    @IBOutlet var titleField: UITextField!
     @IBOutlet var codeField: UITextView!
     
     public var completion: ((String, String)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleField.becomeFirstResponder()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Copy All", style: .done, target: self, action: #selector(didTapSave))
+        codeField.becomeFirstResponder()
         //BEGINNING OF ANJALI KEYBOARD CODE -MM
         view.addSubview(codeField)
         // Do any additional setup after loading the view.
@@ -31,9 +29,6 @@ class MainPageViewController: UIViewController {
         //END OF ANJALI KEYBOARD CODE -MM
     }
     
-    @objc private func didTapDone() { //ALSO ANJALI CODE, may be repetitve with my did tap save -MM
-        codeField.resignFirstResponder()
-    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         codeField.frame = CGRect(x: 20,
@@ -41,10 +36,8 @@ class MainPageViewController: UIViewController {
                              width: view.frame.size.width-40, height: 50)
     }
     
-    @objc func didTapSave(){ //repetitive, morgan is merging this with other one from AR -MM
-        if let text = titleField.text, !text.isEmpty, !codeField.text.isEmpty{
-            completion?(text, codeField.text)
-        }
+    @objc func didTapDone(){ //repetitive, morgan is merging this with other one from AR -MM
+        codeField.resignFirstResponder() //-AR
     }
     
     

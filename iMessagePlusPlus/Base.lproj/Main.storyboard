@@ -12,14 +12,16 @@
         <!--LoginPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainpage" title="LoginPage" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginpage" title="LoginPage" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np5-aw-qHt">
-                                <rect key="frame" x="16" y="533" width="358" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np5-aw-qHt">
+                                <rect key="frame" x="15" y="580" width="360" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kjn-kO-Pbp"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
@@ -39,9 +41,8 @@
                                     <segue destination="K9R-9B-LeE" kind="show" id="OWu-UR-sBu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
-                                <rect key="frame" x="112" y="675" width="167" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
+                                <rect key="frame" x="120" y="680" width="150.33333333333331" height="48"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                     <backgroundConfiguration key="background"/>
@@ -56,19 +57,50 @@
                                     <color key="baseForegroundColor" name="Blue"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpp-AI-v5X">
-                                <rect key="frame" x="11" y="157" width="369" height="272"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpp-AI-v5X">
+                                <rect key="frame" x="10" y="150" width="370" height="347"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xpp-AI-v5X" secondAttribute="height" multiplier="145:136" id="r6G-Gl-bEr"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXh-Hn-QnW">
+                                <rect key="frame" x="22.333333333333343" y="432" width="345.66666666666663" height="20.666666666666686"/>
+                                <color key="backgroundColor" name="Black"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="A C++ Syntax Highlighter for iOS">
+                                        <attributes>
+                                            <color key="NSColor" red="0.68235294117647061" green="0.98039215686274506" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="CourierNewPS-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="White"/>
                         <color key="tintColor" name="Black"/>
+                        <constraints>
+                            <constraint firstItem="2ze-TE-D2B" firstAttribute="top" secondItem="np5-aw-qHt" secondAttribute="bottom" constant="50" id="40z-jP-0lT"/>
+                            <constraint firstItem="np5-aw-qHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXE-vN-HOe"/>
+                            <constraint firstItem="RXh-Hn-QnW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CU3-MT-hvF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="np5-aw-qHt" secondAttribute="trailing" constant="15" id="DjQ-Fo-Mky"/>
+                            <constraint firstItem="Xpp-AI-v5X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-27" id="EHB-sx-eac"/>
+                            <constraint firstItem="RXh-Hn-QnW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="NP4-7m-1LT"/>
+                            <constraint firstItem="2ze-TE-D2B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGk-9i-Jxg"/>
+                            <constraint firstItem="Xpp-AI-v5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qyd-BF-ouN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpp-AI-v5X" secondAttribute="trailing" constant="10" id="R1O-XA-ASr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ze-TE-D2B" secondAttribute="bottom" constant="82" id="U1W-Up-fZ1"/>
+                            <constraint firstItem="np5-aw-qHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jkE-hN-sg6"/>
+                            <constraint firstItem="Xpp-AI-v5X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qC7-Bt-c4o"/>
+                            <constraint firstItem="np5-aw-qHt" firstAttribute="top" secondItem="Xpp-AI-v5X" secondAttribute="bottom" constant="83" id="qgI-0G-J5v"/>
+                            <constraint firstItem="2ze-TE-D2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="rpL-4W-tOi"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="iMessage++" id="TaD-yk-NUm"/>
+                    <navigationItem key="navigationItem" prompt="iMessage++" id="TaD-yk-NUm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,14 +109,13 @@
         <!--MainPage-->
         <scene sceneID="meh-y9-tzl">
             <objects>
-                <viewController title="MainPage" keyboardType="on" id="K9R-9B-LeE" customClass="MainPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainpage" title="MainPage" keyboardType="on" id="K9R-9B-LeE" customClass="MainPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dLH-fo-5Mw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
-                                <rect key="frame" x="16" y="91" width="358" height="458"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
+                                <rect key="frame" x="10" y="135" width="370" height="665"/>
                                 <color key="backgroundColor" name="Black"/>
                                 <attributedString key="attributedText">
                                     <fragment content="//Type code here...">
@@ -101,8 +132,17 @@
                         <viewLayoutGuide key="safeArea" id="yzE-2v-GRM"/>
                         <color key="backgroundColor" name="White"/>
                         <color key="tintColor" name="Black"/>
+                        <constraints>
+                            <constraint firstItem="yzE-2v-GRM" firstAttribute="bottom" secondItem="F4t-VG-ckM" secondAttribute="bottom" constant="10" id="Eiv-UJ-xQn"/>
+                            <constraint firstItem="F4t-VG-ckM" firstAttribute="top" secondItem="yzE-2v-GRM" secondAttribute="top" constant="10" id="aVu-PZ-osc"/>
+                            <constraint firstItem="F4t-VG-ckM" firstAttribute="leading" secondItem="yzE-2v-GRM" secondAttribute="leading" constant="10" id="m31-S7-lgi"/>
+                            <constraint firstItem="yzE-2v-GRM" firstAttribute="trailing" secondItem="F4t-VG-ckM" secondAttribute="trailing" constant="10" id="xHj-bh-0hw"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="space for back button and language dropdown" id="ht8-Uc-sQ8"/>
+                    <navigationItem key="navigationItem" prompt="iMessage++" largeTitleDisplayMode="never" id="ht8-Uc-sQ8"/>
+                    <connections>
+                        <outlet property="codeField" destination="F4t-VG-ckM" id="5L2-KA-4Qk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3o-zr-9m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

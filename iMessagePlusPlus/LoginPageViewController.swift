@@ -21,4 +21,5 @@ class LoginPageViewController: UIViewController {
         vc.title = "Main Page"
         navigationController?.pushViewController(vc, animated: true)
     }
+    //don't forget to do our names on the bottom as a label! -MM
 }
