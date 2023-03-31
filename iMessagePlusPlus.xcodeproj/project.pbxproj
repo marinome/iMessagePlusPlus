@@ -19,6 +19,8 @@
 		7878AC7029D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */; };
 		78E3C66929D3F48700958CDC /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66729D3F48700958CDC /* Logo.png */; };
 		78E3C66A29D3F48700958CDC /* google.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66829D3F48700958CDC /* google.pdf */; };
+		78FB4CD029D677BA001F83DD /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB4CCF29D677BA001F83DD /* MainPageViewController.swift */; };
+		78FB4CD229D677CC001F83DD /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB4CD129D677CC001F83DD /* LoginPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessagePlusPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		78E3C66729D3F48700958CDC /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Assets.xcassets/Logo.png; sourceTree = "<group>"; };
 		78E3C66829D3F48700958CDC /* google.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = google.pdf; path = Assets.xcassets/google.pdf; sourceTree = "<group>"; };
+		78FB4CCF29D677BA001F83DD /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		78FB4CD129D677CC001F83DD /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				7878AC5729D3A7590037976E /* LaunchScreen.storyboard */,
 				7878AC5A29D3A7590037976E /* Info.plist */,
 				7878AC5229D3A7530037976E /* iMessagePlusPlus.xcdatamodeld */,
+				78FB4CCF29D677BA001F83DD /* MainPageViewController.swift */,
+				78FB4CD129D677CC001F83DD /* LoginPageViewController.swift */,
 			);
 			path = iMessagePlusPlus;
 			sourceTree = "<group>";
@@ -269,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78FB4CD029D677BA001F83DD /* MainPageViewController.swift in Sources */,
 				7878AC4E29D3A7530037976E /* ViewController.swift in Sources */,
 				7878AC4A29D3A7530037976E /* AppDelegate.swift in Sources */,
+				78FB4CD229D677CC001F83DD /* LoginPageViewController.swift in Sources */,
 				7878AC4C29D3A7530037976E /* SceneDelegate.swift in Sources */,
 				7878AC5429D3A7530037976E /* iMessagePlusPlus.xcdatamodeld in Sources */,
 			);

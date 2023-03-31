@@ -8,6 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+}
+
+
+/*class ViewController: UIViewController {
     private let textVIew: UITextView = { //text view for input
         let view = UITextView()
         view.isEditable = true
@@ -55,5 +64,5 @@ class ViewController: UIViewController {
             highlight.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor,constant: -10),
         ])
     }
-}
+}*/
 

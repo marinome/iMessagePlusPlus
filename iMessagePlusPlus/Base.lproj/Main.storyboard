@@ -1,65 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTX-G0-odz">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="LJZ-vG-bDr">
-            <objects>
-                <navigationController id="KAt-3a-5r8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3cJ-2g-CdZ">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="kku-66-yqp" kind="relationship" relationship="rootViewController" id="e3e-Kx-YJ4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FG8-ev-Epy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1188" y="-968"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="cSv-MI-FAR">
-            <objects>
-                <tableViewController id="kku-66-yqp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uIW-8x-hBp">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lco-Rs-Mot">
-                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lco-Rs-Mot" id="Na0-ud-tE8">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="kku-66-yqp" id="PtB-xX-Bnh"/>
-                            <outlet property="delegate" destination="kku-66-yqp" id="q7c-T1-WhL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="qzC-w8-HNA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zAb-xE-GSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-383" y="-967"/>
-        </scene>
         <!--LoginPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainpage" title="LoginPage" id="BYZ-38-t0r" customClass="LoginPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +35,8 @@
                                     <color key="baseForegroundColor" name="Black"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="K9R-9B-LeE" kind="showDetail" id="fe6-2d-6co"/>
+                                    <action selector="didTapGetStarted" destination="BYZ-38-t0r" eventType="touchDown" id="Pqn-WT-SCM"/>
+                                    <segue destination="K9R-9B-LeE" kind="show" id="OWu-UR-sBu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
@@ -114,58 +68,33 @@
                         <color key="backgroundColor" name="White"/>
                         <color key="tintColor" name="Black"/>
                     </view>
+                    <navigationItem key="navigationItem" title="iMessage++" id="TaD-yk-NUm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429.23076923076923" y="-289.33649289099526"/>
+            <point key="canvasLocation" x="500" y="-289.33649289099526"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="meh-y9-tzl">
             <objects>
-                <viewController title="MainPage" id="K9R-9B-LeE" sceneMemberID="viewController">
+                <viewController title="MainPage" keyboardType="on" id="K9R-9B-LeE" customClass="MainPageViewController" customModule="iMessagePlusPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dLH-fo-5Mw">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPW-2m-EoQ">
-                                <rect key="frame" x="251" y="9" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <menu key="menu" id="djc-bo-x3G">
-                                    <children>
-                                        <command title="C++" id="8s8-Rq-2QH"/>
-                                        <command title="..." id="rAd-S9-a18">
-                                            <menuElementAttributes key="attributes" disabled="YES"/>
-                                        </command>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Language:">
-                                    <color key="titleColor" name="Black"/>
-                                    <color key="titleShadowColor" name="Blue"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="filled" title="Language:" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background"/>
-                                    <fontDescription key="titleFontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="17"/>
-                                    <color key="baseForegroundColor" name="Black"/>
-                                    <color key="baseBackgroundColor" name="Blue"/>
-                                </buttonConfiguration>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Type Code Here..." adjustsFontForContentSizeCategory="YES" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="4sP-G3-M8x">
-                                <rect key="frame" x="16" y="47" width="358" height="442"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
+                                <rect key="frame" x="16" y="91" width="358" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="Black"/>
-                                <color key="textColor" name="LightGray"/>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartQuotesType="yes"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
-                                <rect key="frame" x="75" y="79" width="240" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="//Type code here...">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="CourierNewPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -173,11 +102,29 @@
                         <color key="backgroundColor" name="White"/>
                         <color key="tintColor" name="Black"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ht8-Uc-sQ8"/>
+                    <navigationItem key="navigationItem" title="space for back button and language dropdown" id="ht8-Uc-sQ8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3o-zr-9m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316.92307692307691" y="-289.33649289099526"/>
+            <point key="canvasLocation" x="1246.1538461538462" y="-289.33649289099526"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Un5-B0-zcu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gTX-G0-odz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="k6d-oN-5gf">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dKG-xz-QsJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s4z-Zc-MkS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-429.23076923076923" y="-289.33649289099526"/>
         </scene>
     </scenes>
     <resources>
@@ -188,17 +135,8 @@
         <namedColor name="Blue">
             <color red="0.40000000596046448" green="0.86699998378753662" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="LightGray">
-            <color red="0.79199999570846558" green="0.80000001192092896" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="White">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
