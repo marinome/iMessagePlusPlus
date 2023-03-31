@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
-                                <rect key="frame" x="120" y="680" width="150.33333333333331" height="48"/>
+                                <rect key="frame" x="120" y="680" width="150" height="48"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
                                     <backgroundConfiguration key="background"/>
@@ -139,7 +139,7 @@
                             <constraint firstItem="yzE-2v-GRM" firstAttribute="trailing" secondItem="F4t-VG-ckM" secondAttribute="trailing" constant="10" id="xHj-bh-0hw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" prompt="iMessage++" largeTitleDisplayMode="never" id="ht8-Uc-sQ8"/>
+                    <navigationItem key="navigationItem" title="back button and dropdown" prompt="iMessage++" largeTitleDisplayMode="never" id="ht8-Uc-sQ8"/>
                     <connections>
                         <outlet property="codeField" destination="F4t-VG-ckM" id="5L2-KA-4Qk"/>
                     </connections>
