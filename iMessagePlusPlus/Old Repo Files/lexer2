@@ -1,0 +1,114 @@
+import Foundation
+
+enum TokenType {
+    case keyword
+    case identifier
+    case number
+    case string
+    case comment
+}
+
+class Token {
+    var type: TokenType
+    var value: String
+    
+    init(type: TokenType, value: String) {
+        self.type = type
+        self.value = value
+    }
+}
+
+class Lexer {
+    let input: String
+    var currentIndex: String.Index
+    var currentChar: Character?
+    
+    init(input: String) {
+        self.input = input
+        self.currentIndex = input.startIndex
+    }
+    
+    func advance() {
+        if currentIndex < input.endIndex {
+            currentIndex = input.index(after: currentIndex)
+            currentChar = input[currentIndex]
+        } else {
+            currentChar = nil
+        }
+    }
+    
+    func peek() -> Character? {
+        let peekIndex = input.index(after: currentIndex)
+        if peekIndex < input.endIndex {
+            return input[peekIndex]
+        } else {
+            return nil
+        }
+    }
+    
+    func tokenize() -> [Token] {
+        var tokens = [Token]()
+        while currentIndex < input.endIndex {
+            if let char = currentChar {
+                if char.isWhitespace {
+                    advance()
+                } else if char.isLetter {
+                    let value = readIdentifier()
+                    let type = checkType(identifier: value)
+                    tokens.append(Token(type: type, value: value))
+                } else if char.isNumber {
+                    let value = readNumber()
+                    tokens.append(Token(type: .number, value: value))
+                } else if char == "\"" {
+                    let value = readString()
+                    tokens.append(Token(type: .string, value: value))
+                } else if "+-*/%".contains(char) {
+                    advance()
+                    tokens.append(Token(type: .identifier, value: String(char)))
+                } else {
+                    advance()
+                }
+            }
+        }
+        return tokens
+    }
+    
+    private func readIdentifier() -> String {
+        var value = ""
+        while let char = currentChar, char.isLetter || char.isNumber {
+            value.append(char)
+            advance()
+        }
+        return value
+    }
+    
+    private func readNumber() -> String {
+        var value = ""
+        while let char = currentChar, char.isNumber {
+            value.append(char)
+            advance()
+        }
+        return value
+    }
+    
+    private func readString() -> String {
+        advance()
+        var value = ""
+        while let char = currentChar, char != "\"" {
+            value.append(char)
+            advance()
+        }
+        advance()
+        return value
+    }
+    
+    private func checkType(identifier: String) -> TokenType {
+        switch identifier {
+        case "int", "float", "double", "char":
+            return .keyword
+        default:
+            return .identifier
+        }
+    }
+    
+   
