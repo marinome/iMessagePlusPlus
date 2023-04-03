@@ -7,12 +7,15 @@
 
 import SwiftUI
 import CodeEditor
+public extension CodeEditor.ThemeName{
+    static var imessageplusplus = CodeEditor.ThemeName(rawValue:"imessage-plus-plus")
+}
 
 struct ContentView: View {
     @State private var source = "//Type code here..."
     
     var body: some View {
-        CodeEditor(source: $source, language: .cpp, theme: .ocean,  flags: [ .selectable, .editable, .smartIndent], autoPairs: [ "{": "}", "'": "'" ])
+        CodeEditor(source: $source, language: .cpp, theme: .atelierSavannaDark,  flags: [ .selectable, .editable, .smartIndent], autoPairs: [ "{": "}", "'": "'", "(": ")" ])
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     //https://developer.apple.com/documentation/swiftui/view/toolbar(content:)-5w0tj

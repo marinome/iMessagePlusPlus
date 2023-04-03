@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7802124129DA87950017417D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802124029DA87950017417D /* ContentView.swift */; };
-		7802124329DA9F310017417D /* imessage-plus-plus.min in Resources */ = {isa = PBXBuildFile; fileRef = 7802124229DA9F310017417D /* imessage-plus-plus.min */; };
+		7802124529DAA9920017417D /* imessage-plus-plus.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7802124429DAA9910017417D /* imessage-plus-plus.min.css */; };
 		781B31E529DA683F00F887EA /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 781B31E429DA683F00F887EA /* CodeEditor */; };
 		7878AC4A29D3A7530037976E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC4929D3A7530037976E /* AppDelegate.swift */; };
 		7878AC4C29D3A7530037976E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC4B29D3A7530037976E /* SceneDelegate.swift */; };
@@ -45,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		7802124029DA87950017417D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7802124229DA9F310017417D /* imessage-plus-plus.min */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "imessage-plus-plus.min"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.css; };
+		7802124429DAA9910017417D /* imessage-plus-plus.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "imessage-plus-plus.min.css"; sourceTree = "<group>"; };
 		7878AC4629D3A7530037976E /* iMessagePlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessagePlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7878AC4929D3A7530037976E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7878AC4B29D3A7530037976E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				7878AC4929D3A7530037976E /* AppDelegate.swift */,
-				7802124229DA9F310017417D /* imessage-plus-plus.min */,
 				7878AC4B29D3A7530037976E /* SceneDelegate.swift */,
+				7802124429DAA9910017417D /* imessage-plus-plus.min.css */,
 				7878AC4D29D3A7530037976E /* ViewController.swift */,
 				7878AC4F29D3A7530037976E /* Main.storyboard */,
 				7878AC5529D3A7590037976E /* Assets.xcassets */,
@@ -260,9 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7802124329DA9F310017417D /* imessage-plus-plus.min in Resources */,
 				78E3C66929D3F48700958CDC /* Logo.png in Resources */,
 				7878AC5929D3A7590037976E /* LaunchScreen.storyboard in Resources */,
+				7802124529DAA9920017417D /* imessage-plus-plus.min.css in Resources */,
 				7878AC5629D3A7590037976E /* Assets.xcassets in Resources */,
 				78E3C66A29D3F48700958CDC /* google.pdf in Resources */,
 				7878AC5129D3A7530037976E /* Main.storyboard in Resources */,
