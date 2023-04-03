@@ -20,6 +20,16 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .keyboard) {
                     //https://developer.apple.com/documentation/swiftui/view/toolbar(content:)-5w0tj
                 }
+               /*  var body: some View {
+        TextEditor(text: $text)
+           
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                Button("Reset"){
+                self.tapDone = "Done"   
+            }
+            }
+} */
             }
     }
 }
