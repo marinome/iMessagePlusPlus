@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  iMessagePlusPlus
 //
-//  Created by Morgan Marino on 3/28/23.
+//  Created by MM, not edited since creation.
 //
 
 import UIKit

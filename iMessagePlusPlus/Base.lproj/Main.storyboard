@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np5-aw-qHt">
-                                <rect key="frame" x="15" y="580" width="360" height="50"/>
+                                <rect key="frame" x="84.000000000000014" y="580" width="222.33333333333337" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kjn-kO-Pbp"/>
                                 </constraints>
@@ -40,22 +40,6 @@
                                     <action selector="didTapGetStarted" destination="BYZ-38-t0r" eventType="touchDown" id="Pqn-WT-SCM"/>
                                     <segue destination="K9R-9B-LeE" kind="show" id="OWu-UR-sBu"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
-                                <rect key="frame" x="120" y="680" width="150" height="48"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" cornerStyle="capsule">
-                                    <backgroundConfiguration key="background"/>
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign In">
-                                            <attributes>
-                                                <font key="NSFont" size="30" name="CourierNewPS-BoldMT"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" name="Blue"/>
-                                </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpp-AI-v5X">
                                 <rect key="frame" x="10" y="150" width="370" height="347"/>
@@ -79,6 +63,29 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ze-TE-D2B">
+                                <rect key="frame" x="42" y="680" width="306" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="7Lx-Ow-06y"/>
+                                    <constraint firstAttribute="width" constant="306" id="SNF-zV-eHA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" subtitle="Anjali Roy, Divya Shakamuri, Morgan Marino, Shayen Patel" titleAlignment="center">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="Black"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Developed by:">
+                                            <attributes>
+                                                <font key="NSFont" size="23" name="CourierNewPS-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <fontDescription key="subtitleFontDescription" name="CourierNewPSMT" family="Courier New" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="LizardGreen"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="White"/>
@@ -87,17 +94,15 @@
                             <constraint firstItem="2ze-TE-D2B" firstAttribute="top" secondItem="np5-aw-qHt" secondAttribute="bottom" constant="50" id="40z-jP-0lT"/>
                             <constraint firstItem="np5-aw-qHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BXE-vN-HOe"/>
                             <constraint firstItem="RXh-Hn-QnW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CU3-MT-hvF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="np5-aw-qHt" secondAttribute="trailing" constant="15" id="DjQ-Fo-Mky"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="np5-aw-qHt" secondAttribute="trailing" id="DjQ-Fo-Mky"/>
                             <constraint firstItem="Xpp-AI-v5X" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-27" id="EHB-sx-eac"/>
                             <constraint firstItem="RXh-Hn-QnW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="NP4-7m-1LT"/>
                             <constraint firstItem="2ze-TE-D2B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGk-9i-Jxg"/>
                             <constraint firstItem="Xpp-AI-v5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qyd-BF-ouN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xpp-AI-v5X" secondAttribute="trailing" constant="10" id="R1O-XA-ASr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2ze-TE-D2B" secondAttribute="bottom" constant="82" id="U1W-Up-fZ1"/>
-                            <constraint firstItem="np5-aw-qHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jkE-hN-sg6"/>
+                            <constraint firstItem="np5-aw-qHt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jkE-hN-sg6"/>
                             <constraint firstItem="Xpp-AI-v5X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qC7-Bt-c4o"/>
                             <constraint firstItem="np5-aw-qHt" firstAttribute="top" secondItem="Xpp-AI-v5X" secondAttribute="bottom" constant="83" id="qgI-0G-J5v"/>
-                            <constraint firstItem="2ze-TE-D2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="rpL-4W-tOi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" prompt="iMessage++" id="TaD-yk-NUm"/>
@@ -114,9 +119,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
-                                <rect key="frame" x="10" y="135" width="370" height="665"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="370" placeholderIntrinsicHeight="665" indicatorStyle="white" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
+                                <rect key="frame" x="10" y="135" width="370" height="615"/>
                                 <color key="backgroundColor" name="Black"/>
+                                <color key="tintColor" name="White"/>
                                 <attributedString key="attributedText">
                                     <fragment content="//Type code here...">
                                         <attributes>
@@ -133,7 +139,7 @@
                         <color key="backgroundColor" name="White"/>
                         <color key="tintColor" name="Black"/>
                         <constraints>
-                            <constraint firstItem="yzE-2v-GRM" firstAttribute="bottom" secondItem="F4t-VG-ckM" secondAttribute="bottom" constant="10" id="Eiv-UJ-xQn"/>
+                            <constraint firstItem="yzE-2v-GRM" firstAttribute="bottom" secondItem="F4t-VG-ckM" secondAttribute="bottom" constant="60" id="Eiv-UJ-xQn"/>
                             <constraint firstItem="F4t-VG-ckM" firstAttribute="top" secondItem="yzE-2v-GRM" secondAttribute="top" constant="10" id="aVu-PZ-osc"/>
                             <constraint firstItem="F4t-VG-ckM" firstAttribute="leading" secondItem="yzE-2v-GRM" secondAttribute="leading" constant="10" id="m31-S7-lgi"/>
                             <constraint firstItem="yzE-2v-GRM" firstAttribute="trailing" secondItem="F4t-VG-ckM" secondAttribute="trailing" constant="10" id="xHj-bh-0hw"/>
@@ -156,6 +162,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="k6d-oN-5gf">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="LightGray"/>
+                        <color key="tintColor" name="LizardGreen"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="24"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="30"/>
+                            <color key="textColor" name="Black"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -174,6 +189,12 @@
         </namedColor>
         <namedColor name="Blue">
             <color red="0.40000000596046448" green="0.86699998378753662" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.79199999570846558" green="0.80000001192092896" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LizardGreen">
+            <color red="0.68199998140335083" green="0.98000001907348633" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
