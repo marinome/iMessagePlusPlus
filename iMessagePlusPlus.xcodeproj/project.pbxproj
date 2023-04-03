@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7802124129DA87950017417D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802124029DA87950017417D /* ContentView.swift */; };
-		7802124529DAA9920017417D /* imessage-plus-plus.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7802124429DAA9910017417D /* imessage-plus-plus.min.css */; };
+		7802124529DAA9920017417D /* imessageplusplus.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 7802124429DAA9910017417D /* imessageplusplus.min.css */; };
 		781B31E529DA683F00F887EA /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 781B31E429DA683F00F887EA /* CodeEditor */; };
+		783ED66F29DB86A200027246 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = 783ED66E29DB86A200027246 /* Highlightr */; };
 		7878AC4A29D3A7530037976E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC4929D3A7530037976E /* AppDelegate.swift */; };
 		7878AC4C29D3A7530037976E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC4B29D3A7530037976E /* SceneDelegate.swift */; };
 		7878AC4E29D3A7530037976E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC4D29D3A7530037976E /* ViewController.swift */; };
@@ -20,6 +21,12 @@
 		7878AC6429D3A7590037976E /* iMessagePlusPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6329D3A7590037976E /* iMessagePlusPlusTests.swift */; };
 		7878AC6E29D3A7590037976E /* iMessagePlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6D29D3A7590037976E /* iMessagePlusPlusUITests.swift */; };
 		7878AC7029D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */; };
+		78AAD5AA29DB7AAC003900EA /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5A929DB7AAB003900EA /* Lexer.swift */; };
+		78AAD5AC29DB7AC1003900EA /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5AB29DB7AC1003900EA /* Language.swift */; };
+		78AAD5AE29DB7AD8003900EA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5AD29DB7AD8003900EA /* Theme.swift */; };
+		78AAD5B229DB7D14003900EA /* TypedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5B129DB7D14003900EA /* TypedString.swift */; };
+		78AAD5B429DB7D42003900EA /* UXCodeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5B329DB7D42003900EA /* UXCodeTextView.swift */; };
+		78AAD5B629DB7D5D003900EA /* UXCodeTextViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AAD5B529DB7D5D003900EA /* UXCodeTextViewRepresentable.swift */; };
 		78E3C66929D3F48700958CDC /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66729D3F48700958CDC /* Logo.png */; };
 		78E3C66A29D3F48700958CDC /* google.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 78E3C66829D3F48700958CDC /* google.pdf */; };
 		78FB4CD029D677BA001F83DD /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB4CCF29D677BA001F83DD /* MainPageViewController.swift */; };
@@ -45,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		7802124029DA87950017417D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7802124429DAA9910017417D /* imessage-plus-plus.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "imessage-plus-plus.min.css"; sourceTree = "<group>"; };
+		7802124429DAA9910017417D /* imessageplusplus.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = imessageplusplus.min.css; sourceTree = "<group>"; };
 		7878AC4629D3A7530037976E /* iMessagePlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessagePlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7878AC4929D3A7530037976E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7878AC4B29D3A7530037976E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +67,13 @@
 		7878AC6929D3A7590037976E /* iMessagePlusPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessagePlusPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7878AC6D29D3A7590037976E /* iMessagePlusPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessagePlusPlusUITests.swift; sourceTree = "<group>"; };
 		7878AC6F29D3A7590037976E /* iMessagePlusPlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessagePlusPlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78AAD5A929DB7AAB003900EA /* Lexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		78AAD5AB29DB7AC1003900EA /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		78AAD5AD29DB7AD8003900EA /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		78AAD5AF29DB7AED003900EA /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		78AAD5B129DB7D14003900EA /* TypedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedString.swift; sourceTree = "<group>"; };
+		78AAD5B329DB7D42003900EA /* UXCodeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXCodeTextView.swift; sourceTree = "<group>"; };
+		78AAD5B529DB7D5D003900EA /* UXCodeTextViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UXCodeTextViewRepresentable.swift; sourceTree = "<group>"; };
 		78E3C66729D3F48700958CDC /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = Assets.xcassets/Logo.png; sourceTree = "<group>"; };
 		78E3C66829D3F48700958CDC /* google.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = google.pdf; path = Assets.xcassets/google.pdf; sourceTree = "<group>"; };
 		78FB4CCF29D677BA001F83DD /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783ED66F29DB86A200027246 /* Highlightr in Frameworks */,
 				781B31E529DA683F00F887EA /* CodeEditor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,8 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				7878AC4929D3A7530037976E /* AppDelegate.swift */,
+				78AAD5A829DB7A87003900EA /* Lexer */,
 				7878AC4B29D3A7530037976E /* SceneDelegate.swift */,
-				7802124429DAA9910017417D /* imessage-plus-plus.min.css */,
+				7802124429DAA9910017417D /* imessageplusplus.min.css */,
 				7878AC4D29D3A7530037976E /* ViewController.swift */,
 				7878AC4F29D3A7530037976E /* Main.storyboard */,
 				7878AC5529D3A7590037976E /* Assets.xcassets */,
@@ -150,6 +166,20 @@
 			path = iMessagePlusPlusUITests;
 			sourceTree = "<group>";
 		};
+		78AAD5A829DB7A87003900EA /* Lexer */ = {
+			isa = PBXGroup;
+			children = (
+				78AAD5A929DB7AAB003900EA /* Lexer.swift */,
+				78AAD5AB29DB7AC1003900EA /* Language.swift */,
+				78AAD5AD29DB7AD8003900EA /* Theme.swift */,
+				78AAD5AF29DB7AED003900EA /* Package.swift */,
+				78AAD5B129DB7D14003900EA /* TypedString.swift */,
+				78AAD5B329DB7D42003900EA /* UXCodeTextView.swift */,
+				78AAD5B529DB7D5D003900EA /* UXCodeTextViewRepresentable.swift */,
+			);
+			path = Lexer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +198,7 @@
 			name = iMessagePlusPlus;
 			packageProductDependencies = (
 				781B31E429DA683F00F887EA /* CodeEditor */,
+				783ED66E29DB86A200027246 /* Highlightr */,
 			);
 			productName = iMessagePlusPlus;
 			productReference = 7878AC4629D3A7530037976E /* iMessagePlusPlus.app */;
@@ -243,6 +274,7 @@
 			mainGroup = 7878AC3D29D3A7530037976E;
 			packageReferences = (
 				781B31E329DA683F00F887EA /* XCRemoteSwiftPackageReference "CodeEditor" */,
+				783ED66D29DB86A200027246 /* XCRemoteSwiftPackageReference "Highlightr" */,
 			);
 			productRefGroup = 7878AC4729D3A7530037976E /* Products */;
 			projectDirPath = "";
@@ -262,7 +294,7 @@
 			files = (
 				78E3C66929D3F48700958CDC /* Logo.png in Resources */,
 				7878AC5929D3A7590037976E /* LaunchScreen.storyboard in Resources */,
-				7802124529DAA9920017417D /* imessage-plus-plus.min.css in Resources */,
+				7802124529DAA9920017417D /* imessageplusplus.min.css in Resources */,
 				7878AC5629D3A7590037976E /* Assets.xcassets in Resources */,
 				78E3C66A29D3F48700958CDC /* google.pdf in Resources */,
 				7878AC5129D3A7530037976E /* Main.storyboard in Resources */,
@@ -291,11 +323,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FB4CD029D677BA001F83DD /* MainPageViewController.swift in Sources */,
+				78AAD5B229DB7D14003900EA /* TypedString.swift in Sources */,
 				7878AC4E29D3A7530037976E /* ViewController.swift in Sources */,
+				78AAD5B429DB7D42003900EA /* UXCodeTextView.swift in Sources */,
 				7802124129DA87950017417D /* ContentView.swift in Sources */,
+				78AAD5AC29DB7AC1003900EA /* Language.swift in Sources */,
 				7878AC4A29D3A7530037976E /* AppDelegate.swift in Sources */,
 				78FB4CD229D677CC001F83DD /* LoginPageViewController.swift in Sources */,
 				7878AC4C29D3A7530037976E /* SceneDelegate.swift in Sources */,
+				78AAD5B629DB7D5D003900EA /* UXCodeTextViewRepresentable.swift in Sources */,
+				78AAD5AE29DB7AD8003900EA /* Theme.swift in Sources */,
+				78AAD5AA29DB7AAC003900EA /* Lexer.swift in Sources */,
 				7878AC5429D3A7530037976E /* iMessagePlusPlus.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +700,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		783ED66D29DB86A200027246 /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raspu/Highlightr";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +715,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 781B31E329DA683F00F887EA /* XCRemoteSwiftPackageReference "CodeEditor" */;
 			productName = CodeEditor;
+		};
+		783ED66E29DB86A200027246 /* Highlightr */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 783ED66D29DB86A200027246 /* XCRemoteSwiftPackageReference "Highlightr" */;
+			productName = Highlightr;
 		};
 /* End XCSwiftPackageProductDependency section */
 

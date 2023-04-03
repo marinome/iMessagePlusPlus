@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 import CodeEditor
+import Highlightr
+//import Lexer
 
 class MainPageViewController: UIViewController, UITextViewDelegate {
     
