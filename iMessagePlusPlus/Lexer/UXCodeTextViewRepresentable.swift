@@ -2,7 +2,7 @@
 //  UXCodeTextViewRepresentable.swift
 //  iMessagePlusPlus
 //
-//  Created by Morgan Marino on 4/3/23.
+//  Created by MM, edited by MM
 //
 
 import Foundation
@@ -53,7 +53,7 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
     // might be destructed and recreated in between calls to `makeCoordinator()`
     // and `updateTextView(_:)`.
     @State private var isCurrentlyUpdatingView = ReferenceTypeBool(value: false)
-
+    
     public final class Coordinator: NSObject, UXCodeTextViewDelegate {
         var parent : UXCodeTextViewRepresentable
         var fontSize : CGFloat? {
@@ -70,7 +70,6 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
 #else
 #error("Unsupported OS")
 #endif
-        
         private func textViewDidChange(textView: UXTextView) {
             // This function may be called as a consequence of updating the text string
             //  in UXCodeTextViewRepresentable/updateTextView(_:)`.
@@ -80,7 +79,6 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
             guard !parent.isCurrentlyUpdatingView.value else {
                 return
             }
-            
             parent.source.wrappedValue = textView.string
         }
         

@@ -119,10 +119,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="370" placeholderIntrinsicHeight="665" indicatorStyle="white" usesAttributedText="YES" allowsEditingTextAttributes="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="370" placeholderIntrinsicHeight="665" indicatorStyle="white" usesAttributedText="YES" allowsEditingTextAttributes="YES" layoutManager="textKit1" translatesAutoresizingMaskIntoConstraints="NO" id="F4t-VG-ckM">
                                 <rect key="frame" x="10" y="135" width="370" height="615"/>
                                 <color key="backgroundColor" name="Black"/>
-                                <color key="tintColor" name="White"/>
+                                <color key="tintColor" name="Blue"/>
                                 <attributedString key="attributedText">
                                     <fragment content="//Type code here...">
                                         <attributes>
@@ -132,7 +132,7 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yzE-2v-GRM"/>
@@ -182,6 +182,7 @@
             <point key="canvasLocation" x="-429.23076923076923" y="-289.33649289099526"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Blue"/>
     <resources>
         <image name="Logo.png" width="217.5" height="124.5"/>
         <namedColor name="Black">

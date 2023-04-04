@@ -2,7 +2,7 @@
 //  TypedString.swift
 //  iMessagePlusPlus
 //
-//  Created by Morgan Marino on 4/3/23.
+//  Created by MM, edited by MM
 //
 
 import Foundation
@@ -14,7 +14,6 @@ public protocol TypedString: RawRepresentable, Hashable, Comparable, Codable, Cu
 }
 
 public extension TypedString where RawValue == String {
-    
     @inlinable var description : String { return self.rawValue }
     @inlinable var id          : String { return self.rawValue }
     @inlinable static func < (lhs: Self, rhs: Self) -> Bool {

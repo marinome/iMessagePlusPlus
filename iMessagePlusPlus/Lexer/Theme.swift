@@ -7,12 +7,9 @@
 
 import Foundation
 public extension Lexer {
-    
     @frozen
     struct ThemeName: TypedString {
-        
         public let rawValue : String
-        
         @inlinable
         public init(rawValue: String) { self.rawValue = rawValue }
     }
@@ -21,7 +18,6 @@ public extension Lexer {
 public extension Lexer.ThemeName {
     static var imessageplusplus = Lexer.ThemeName(rawValue: "imessageplusplus")
     //static var `default` = imessageplusplus
-    
     static var `default` = pojoaque
     static var pojoaque  = Lexer.ThemeName(rawValue: "pojoaque")
     static var agate     = Lexer.ThemeName(rawValue: "agate")

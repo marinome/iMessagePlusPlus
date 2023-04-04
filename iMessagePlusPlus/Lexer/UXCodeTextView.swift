@@ -2,7 +2,7 @@
 //  UXCodeTextView.swift
 //  iMessagePlusPlus
 //
-//  Created by Morgan Marino on 4/3/23.
+//  Created by MM, edited by MM
 //
 
 import Foundation
@@ -76,8 +76,7 @@ final class UXCodeTextView: UXTextView {
     }
 #endif
     private func reindent(oldStyle: Lexer.IndentStyle) {
-        // - walk over the lines, strip and count the whitespaces and do something
-        //   clever :-)
+        // - walk over the lines, strip and count the whitespaces
     }
     @discardableResult
     func applyNewFontSize(_ newSize: CGFloat) -> Bool {
@@ -117,7 +116,6 @@ protocol UXCodeTextViewDelegate: UXTextViewDelegate {
 }
 // MARK: - Smarts as shown in https://github.com/naoty/NTYSmartTextView
 extension UXTextView {
-    
     var swiftSelectedRange : Range<String.Index> {
         let s = self.string
         guard !s.isEmpty else { return s.startIndex..<s.startIndex }

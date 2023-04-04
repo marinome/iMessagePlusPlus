@@ -7,17 +7,12 @@
 
 import Foundation
 public extension Lexer {
-  
-  @frozen
-  struct Language: TypedString {
-    
-    public let rawValue : String
-    
-    @inlinable
-    public init(rawValue: String) { self.rawValue = rawValue }
-  }
+    @frozen
+    struct Language: TypedString {
+        public let rawValue : String
+        @inlinable
+        public init(rawValue: String) { self.rawValue = rawValue }
+    }
 }
 
-public extension Lexer.Language {
-  static var cpp          = Lexer.Language(rawValue: "cpp")
-}
+public extension Lexer.Language {static var cpp = Lexer.Language(rawValue: "cpp")}
