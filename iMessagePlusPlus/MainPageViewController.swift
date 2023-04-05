@@ -110,6 +110,22 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
     @IBAction func hideKeyboard(_ sender: AnyObject?){
         textView.resignFirstResponder()
     }
+    //determines color that returns from lexer
+if let highlightr = highlightr {
+    let range = NSRange(location: 0, length: textView.text.count)
+    let color = highlightr.color(for: textView.text, as: textStorage.language ?? "")
+    textView.tintColor = color
+}
+
+function that should change cursor
+func textViewDidChange(_ textView: UITextView) {
+    if let highlightr = highlightr {
+        let range = NSRange(location: 0, length: textView.text.count)
+        let color = highlightr.color(for: textView.text, as: textStorage.language ?? "")
+        textView.tintColor = color
+    }
+}
+
 }
 
 /*func createTextView() {
