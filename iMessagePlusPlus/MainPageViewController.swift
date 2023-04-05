@@ -110,8 +110,8 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
     @IBAction func hideKeyboard(_ sender: AnyObject?){
         textView.resignFirstResponder()
     }
-    //determines color that returns from lexer
-if let highlightr = highlightr {
+//Start of DS code
+/*if let highlightr = highlightr {
     let range = NSRange(location: 0, length: textView.text.count)
     let color = highlightr.color(for: textView.text, as: textStorage.language ?? "")
     textView.tintColor = color
@@ -124,7 +124,7 @@ func textViewDidChange(_ textView: UITextView) {
         let color = highlightr.color(for: textView.text, as: textStorage.language ?? "")
         textView.tintColor = color
     }
-}
+}*/ //DS - should fix cursor and "Select All" color
 
 }
 
