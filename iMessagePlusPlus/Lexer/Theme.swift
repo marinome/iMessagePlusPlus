@@ -16,8 +16,10 @@ public extension Lexer {
 }
 
 public extension Lexer.ThemeName {
+    // Define the imessageplusplus theme
     static var imessageplusplus = Lexer.ThemeName(rawValue: "imessageplusplus")
     //static var `default` = imessageplusplus
+    // Note: the `default` identifier is enclosed in backticks because it is a reserved keyword in Swift
     static var `default` = pojoaque
     static var pojoaque  = Lexer.ThemeName(rawValue: "pojoaque")
     static var agate     = Lexer.ThemeName(rawValue: "agate")
