@@ -36,10 +36,18 @@ final class UXCodeTextView: UXTextView {
     }
     private(set) var themeName = Lexer.ThemeName.default {
         didSet {
+            // Set the current theme of the highlightr object to the new theme
             highlightr?.setTheme(to: themeName.rawValue)
+            // If the codeFont property of the current theme exists, set the font to it
             if let font = highlightr?.theme?.codeFont { self.font = font }
         }
     }
+    //Initializes the CodeTextView by setting up the required text storage,
+    layout manager and text container objects. The CodeAttributedString is
+    created from the highlightr instance, and added to the text storage. 
+    The text container is configured to track the width of the text view,
+    and added to the layout manager. Finally, the superclass initializer is 
+    called with a frame of zero and the configured text container.
     init() {
         let textStorage = highlightr.flatMap {
             CodeAttributedString(highlightr: $0)
@@ -125,18 +133,22 @@ extension UXTextView {
         }
         return selectedRange
     }
+    // This private computed property returns the current line of the text view
     fileprivate var currentLine: String {
         let s = self.string
         return String(s[s.lineRange(for: swiftSelectedRange)])
     }
+    // This private computed property checks whether the cursor is at the end of the current line
     fileprivate var isEndOfLine : Bool {
         let ( _, isEnd ) = getStartOrEndOfLine()
         return isEnd
     }
+    // This private computed property checks whether the cursor is at the start or end of the current line
     fileprivate var isStartOrEndOfLine : Bool {
         let ( isStart, isEnd ) = getStartOrEndOfLine()
         return isStart || isEnd
     }
+    // This private function returns a tuple containing two boolean values indicating whether the cursor is at the start or end of the line
     fileprivate func getStartOrEndOfLine() -> ( isStart: Bool, isEnd: Bool ) {
         let s             = self.string
         let selectedRange = self.swiftSelectedRange
