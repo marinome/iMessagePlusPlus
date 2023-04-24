@@ -165,26 +165,34 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
     }
     public func makeUIView(context: Context) -> UITextView {
         let textView = UXCodeTextView()
+        // Set the autoresizing mask so that the text view will resize when its superview resizes.
         textView.autoresizingMask   = [ .flexibleWidth, .flexibleHeight ]
+        // Set the delegate to the coordinator provided by the context.
         textView.delegate           = context.coordinator
+        // Set the text container inset to the value specified by the edgeInsets property.
         textView.textContainerInset = edgeInsets
+        // Disable autocapitalization, autocorrection, spell checking, smart dashes, and smart quotes.
         textView.autocapitalizationType = .none
         textView.smartDashesType = .no
         textView.autocorrectionType = .no
         textView.spellCheckingType = .no
         textView.smartQuotesType = .no
+        // Call the updateTextView method to configure the appearance and behavior of the text view.
         updateTextView(textView)
         return textView
     }
     public func updateUIView(_ textView: UITextView, context: Context) {
+        // Check that the provided text view is actually a UXCodeTextView.
         guard let textView = textView as? UXCodeTextView else {
             assertionFailure("unexpected text view")
             return
         }
+        // Set the delegate to the coordinator provided by the context if it has changed.
         if textView.delegate !== context.coordinator {
             textView.delegate = context.coordinator
         }
         textView.textContainerInset = edgeInsets
+        // Call the updateTextView method to configure the appearance and behavior of the text view
         updateTextView(textView)
     }
 }
@@ -199,6 +207,11 @@ extension UXCodeTextViewRepresentable {
         }
     }
 }
+
+// This is a preview provider struct for UXCodeTextViewRepresentable. It contains two preview views
+// The first preview view demonstrates the text view without any language highlighting
+// The second preview view demonstrates the text view with C++ highlighting. Both preview views have
+// the same properties for source, theme, flags, indent style, auto pairs, inset, and auto scroll.
 
 struct UXCodeTextViewRepresentable_Previews: PreviewProvider {
     static var previews: some View{
