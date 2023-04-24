@@ -1,3 +1,7 @@
+//This is an XML file containing a storyboard for an iOS app. It specifies the layout and appearance of a single view controller,
+//which includes an image view with an image named "Logo.png" and a white background color. The view controller is set as the initial
+//view controller. The file also includes a named color "White" that is used for the background color. Additionally, it specifies the 
+//device type and orientation. Overall, this code defines the layout and appearance of a single view in an iOS app.
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
