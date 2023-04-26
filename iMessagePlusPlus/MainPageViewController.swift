@@ -13,6 +13,7 @@ import Highlightr
 
 class MainPageViewController: UIViewController, UITextViewDelegate {
     //Start Lexer
+    //buttons for functionality 
     //@IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     //@IBOutlet weak var viewPlaceholder: UIView!
@@ -25,6 +26,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
     //end Lexer
     let contentView = UIHostingController(rootView: ContentView())
     
+    //create button
     @IBOutlet var codeField: UITextView!
     
     public var completion: ((String, String)->Void)?
@@ -43,6 +45,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
         let textContainer = NSTextContainer(size: view.bounds.size)
         layoutManager.addTextContainer(textContainer)
         
+        //auto correct typing into correct syntax of programming language 
         textView = UITextView(frame: CGRect(x: 20, y: 30 + view.safeAreaInsets.top, width: view.frame.size.width-40, height: 50), textContainer: textContainer)
         textView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textView.autocorrectionType = UITextAutocorrectionType.no
@@ -50,6 +53,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
         textView.textColor = UIColor(named: "LizardGreen")
         textView.inputAccessoryView = textToolbar
         //viewPlaceholder.addSubview(textView)
+        
         
         let code = "int main(){\n\treturn 0;\n}"
         textView.text = code
@@ -74,10 +78,10 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
         let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
         toolBar.items = [tabButton, flexibleSpace, doneButton]
         toolBar.sizeToFit()
-        codeField.inputAccessoryView = toolBar
+        codeField.inputAccessoryView = toolBar //create the pop up keyboard functionality 
         //END OF KEYBOARD CODE -MM
     }
-    
+    //
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         codeField.frame = CGRect(x: 20, y: 30 + view.safeAreaInsets.top, width: view.frame.size.width-40, height: 50) //not sure what this does
@@ -90,7 +94,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
     @objc func didTapTab(_ sender: Any){ //AUTO-INDENTATION FUNCTION WHEN UR READY-MM
         codeField.text += "    "
     }
-    
+    //set up how the code will display to the user
     private func setupConstraints(){
      contentView.view.translatesAutoresizingMaskIntoConstraints = false
      contentView.view.topAnchor.constraint(equalTo: codeField.topAnchor).isActive = true
@@ -98,7 +102,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
      contentView.view.leftAnchor.constraint(equalTo: codeField.leftAnchor).isActive = true
      contentView.view.rightAnchor.constraint(equalTo: codeField.rightAnchor).isActive = true
      }
-    
+    //follows the syntax of C++
     @IBAction func pickLanguage(_ sender: AnyObject){
         let snippetPath = Bundle.main.path(forResource: "default", ofType: "txt", inDirectory: "Samples/cpp", forLocalization: nil)
         let snippet = try! String(contentsOfFile: snippetPath!)
@@ -106,7 +110,7 @@ class MainPageViewController: UIViewController, UITextViewDelegate {
         //cancel: nil,
         //origin: toolBar)
     }
-    
+    //closes keyboard on main page
     @IBAction func hideKeyboard(_ sender: AnyObject?){
         textView.resignFirstResponder()
     }
