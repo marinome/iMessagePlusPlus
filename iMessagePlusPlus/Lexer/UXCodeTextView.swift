@@ -43,11 +43,11 @@ final class UXCodeTextView: UXTextView {
         }
     }
     //Initializes the CodeTextView by setting up the required text storage,
-    layout manager and text container objects. The CodeAttributedString is
-    created from the highlightr instance, and added to the text storage. 
-    The text container is configured to track the width of the text view,
-    and added to the layout manager. Finally, the superclass initializer is 
-    called with a frame of zero and the configured text container.
+    //layout manager and text container objects. The CodeAttributedString is
+    //created from the highlightr instance, and added to the text storage. 
+    //The text container is configured to track the width of the text view,
+    //and added to the layout manager. Finally, the superclass initializer is 
+    //called with a frame of zero and the configured text container.
     init() {
         let textStorage = highlightr.flatMap {
             CodeAttributedString(highlightr: $0)
