@@ -133,22 +133,22 @@ extension UXTextView {
         }
         return selectedRange
     }
-    // This private computed property returns the current line of the text view
+    // returns the current line of the text view
     fileprivate var currentLine: String {
         let s = self.string
         return String(s[s.lineRange(for: swiftSelectedRange)])
     }
-    // This private computed property checks whether the cursor is at the end of the current line
+    // checks whether the cursor is at the end of the current line
     fileprivate var isEndOfLine : Bool {
         let ( _, isEnd ) = getStartOrEndOfLine()
         return isEnd
     }
-    // This private computed property checks whether the cursor is at the start or end of the current line
+    // checks whether the cursor is at the start or end of the current line
     fileprivate var isStartOrEndOfLine : Bool {
         let ( isStart, isEnd ) = getStartOrEndOfLine()
         return isStart || isEnd
     }
-    // This private function returns a tuple containing two boolean values indicating whether the cursor is at the start or end of the line
+    //  returns a tuple containing two boolean values indicating whether the cursor is at the start or end of the line
     fileprivate func getStartOrEndOfLine() -> ( isStart: Bool, isEnd: Bool ) {
         let s             = self.string
         let selectedRange = self.swiftSelectedRange
