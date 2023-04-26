@@ -12,10 +12,12 @@ import Highlightr
 /*public extension Lexer.ThemeName{
     static var imessageplusplus = Lexer.ThemeName(rawValue:"imessageplusplus")
 }*/
+//access lexer to put into the generate highlight 
 public extension Lexer.ThemeName{
     static var xt256 = Lexer.ThemeName(rawValue:"xt256")
 }
 
+//user will enter their code and the program will access the lexer and theme to write it with highlighting 
 struct ContentView: View {
     static private let initialSource = "//Type code here...\n"
     @State private var source = Self.initialSource
