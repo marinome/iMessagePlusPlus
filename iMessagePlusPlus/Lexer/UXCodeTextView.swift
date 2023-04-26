@@ -18,7 +18,7 @@ final class UXCodeTextView: UXTextView {
     private var hlTextStorage : CodeAttributedString? {
         return textStorage as? CodeAttributedString
     }
-    //If the user starts a newline, the editor automagically adds the same whitespace as on the previous line.
+    //If the user starts a newline, the editor automatically adds the same whitespace as on the previous line.
     var isSmartIndentEnabled = true
     var indentStyle          = Lexer.IndentStyle.system {
         didSet {
